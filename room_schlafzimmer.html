@@ -7,11 +7,8 @@
 * -----------------------------------------------------------------------------
 */
 
-
-{% extends "rooms.html" %}
+<div data-role="page" id="room_schlafzimmer"  class="base" data-theme="a">
 {% import "widget_list.html" as list %}
-
-{% block content %}
 
 	<div class="preblock">
 	</div>
@@ -35,5 +32,5 @@
 	 	{{ list.it_blind('Roll_Loggia', 'Loggia Rollladen', 'Loggia_blind','Loggia_blind_uzsu') }}
 	 	{{ list.it_blind('Roll_dg.bad_UP', 'Bad Rollladen', 'db.bad_blind', 'dg.bad_blind_uzsu') }}
 	</ul>
-{% endblock %}
+</div>
 

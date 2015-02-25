@@ -7,16 +7,11 @@
 * -----------------------------------------------------------------------------
 */
 
-
-{% extends "base.html"%}
+{% extends "root.html" %}
 
 {% block body %}
-{% include "app.html" %}
-{% include "room_wohnzimmer.html" %}
-{% include "room_buero.html" %}
-{% include "room_schlafzimmer.html" %}
-{% include "room_garage.html" %}
-{% include "info.html" %}
-{% include "Fritzbox.html" %}
+
+{% block footer %}{% endblock %}
 
 {% endblock %}
+

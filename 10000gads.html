@@ -8,16 +8,14 @@
 */
 
 
-{% extends "base.html" %}
-
-{% block sidebar %}
-
-	{% include 'rooms_menu.html' %}
-
-{% endblock %}
+{% extends "rooms.html" %}
 
 {% block content %}
 
-	Rooms
+				{% set arr = [] %}
+				{% for i in 1..10000 %}
+					{{ basic.value(i, 'FB_user1_todaysec') }}
+				{% endfor %}				
 
 {% endblock %}
+

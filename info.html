@@ -1,22 +1,6 @@
-/**
-* -----------------------------------------------------------------------------
-* @package     smartVISU
-* @author      Martin Gleiß
-* @copyright   2012
-* @license     GPL [http://www.gnu.de]
-* -----------------------------------------------------------------------------
-*/
+<div data-role="page" id="info"  class="ui-page" data-theme="a">
 
-
-{% extends "base.html" %}
-
-{% block sidebar %}
-
-	{% include 'rooms_menu.html' %}
-
-{% endblock %}
-
-{% block content %}
+<div data-role="main" class="ui-content">
 
 	{% import "clock.html" as clock %}
 	{{ clock.digiclock('clock') }}
@@ -40,9 +24,8 @@
 	
 	<hr>
 	{% import "calendar.html" as calendar %}
-        {{ calendar.list('calendarlist', 'Kalender', 7) }}
+    {{ calendar.list('calendarlist', 'Kalender', 7) }}
 
 
-{% endblock %}
-
-
+</div>
+</div>
