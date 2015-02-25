@@ -1,6 +1,7 @@
 $(document).on('swipeleft swiperight', function (event) {
  if(event.type == 'swiperight') {
-  var prevpage = '#' + $.mobile.activePage.prev('div[data-role="page"]')[0].id;
+  var prevpage = '#rooms'; 
+	  //+ $.mobile.activePage.prev('div[data-role="page"]')[0].id;
   $.mobile.changePage(prevpage, {
    transition: 'slide',
    reverse: true
