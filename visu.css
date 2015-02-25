@@ -25,6 +25,42 @@ html[data-useragent*='Chrome'] .uzsuTimeInput{
 	padding:3px,3px
 }
 
+div.scenes {
+	position:absolute;
+	top:0;
+	right:0;
+	margin: 20px 0 6px 0;
+	width: 70%;
+	text-align: right;
+	float: right;
+}	
+h1 {
+	}
+
+
+.ui-page > .ui-header {
+text-align: left;
+height: 62px;
+border-bottom: 1px solid #222;
+min-width: 320px;
+}
+
+.ui-page > .ui-header .ui-right {
+width: auto;
+position:absolute;
+top:0;
+right:0;
+float: right;
+margin: 9px 2px 0 0;
+text-align: right;
+}
+.ui-page > .ui-header .ui-left {
+width: 100%;
+float: left;
+margin: 9px 2px 0 0;
+}
+
+
 .LED {
   width: 10px;
   height: 10px;
@@ -73,12 +109,6 @@ div .preblock {
 	
 .ui-li.ui-btn-inner .ui-li-thumb {
     padding: 1px 0 0 1px;
-}
-
-
-.ui-page > .ui-header .ui-right {
-    margin: 5px 5px 0 0;
-    text-align: right;
 }
 
 .ui-page > .ui-header .ui-title {
@@ -543,55 +573,25 @@ height: 300px;
 /* Large desktop */
 @media (min-width: 1200px) {
     .nw_tiles li {
-        width: 33.33%;
+        width: 25%;
     }
-	div.scenes {
-		width: 70%;
-		text-align: right;
-		float: right;
-	}	
-	div.primary > h1, div.secondary > h1 {
-		width: 30%;
-		float: left;
-	}
-
 }
 
 /* Portrait phones to Landscape, iPad 3/4 */
 @media (min-width: 980px) and (max-width: 1199px) {
     .nw_tiles li {
-        width: 50%;
+        width: 33.33%;
     }
-	div.scenes {
-		width: 70%;
-		text-align: right;
-		float: right;
-	}	
-	div.primary > h1, div.secondary > h1 {
-		width: 30%;
-		float: left;
-	}
 }
 
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
     .nw_tiles li {
-        width: 100%;
+        width: 33.33%;
     }
     .content-primary, .content-secondary {
-        top: 47px;
     }
-	div.scenes {
-		width: 70%;
-		text-align: right;
-		float: right;
-	}	
-	div.primary > h1, div.secondary > h1 {
-		width: 30%;
-		float: left;
-	}
-
 }
 
 /* Portrait phones to Landscape */
@@ -600,31 +600,16 @@ height: 300px;
         width: 33.33%;
     }
     .content-primary, .content-secondary {
-        top: 47px;
     }
-	div.scenes {
-		width: 70%;
-		text-align: right;
-		float: right;
-	}	
-	div.primary > h1, div.secondary > h1 {
-		width: 30%;
-		float: left;
-		
-	}
-
 }
 
 /* Portrait phones to Landscape */
 @media (min-width: 569px) and (max-width: 1024px) {
-    .ui-page > .ui-header {
-        height: 47px;
-    }
-
     .content-primary, .content-secondary {
-        top: 47px;
     }
-
+    .nw_tiles li {
+        width: 50%;
+    }
     .ui-header img.icon {
         width: 32px;
         height: 32px;
@@ -633,24 +618,14 @@ height: 300px;
     .ui-page > .ui-header .ui-title {
         margin: 10px 0 6px 30px;
     }
-    div.scenes {
-		width: 70%;
-		text-align: right;
-		float: right;
-	}	
-	div.primary > h1, div.secondary > h1 {
-		width: 30%;
-		float: left;
-	}
 }
 
 /* Portrait phones to Landscape, iPhone6plus */
 @media (min-width: 376px) and (max-width: 568px) {
-    .ui-page > .ui-header {
-        height: 47px;
+    .nw_tiles li {
+        width: 50%;
     }
-    
-    .nw_quad {
+	.nw_quad {
         height: 100%;
     }
     .nw_min_tablet {
@@ -658,21 +633,10 @@ height: 300px;
     }
     .content-primary {
         width: 100%;
-        top: 47px;
     }
-
     .content-secondary {
         display: none;
     }
-    div.scenes {
-		width: 70%;
-		text-align: right;
-		float: right;
-	}	
-	div.primary > h1, div.secondary > h1 {
-		width: 30%;
-		float: left;
-	}
 }
 
 /* Portrait phones to Landscape, iPhone6 */
@@ -680,23 +644,8 @@ height: 300px;
     .nw_tiles li {
         width: 50%;
     }
-
-    .ui-page > .ui-header {
-        height: 47px;
-    }
     .content-primary, .content-secondary {
-        top: 47px;
     }
-        div.scenes {
-		width: 60%;
-		text-align: right;
-		float: right;
-	}	
-	div.primary > h1, div.secondary > h1 {
-		width: 40%;
-		float: left;
-	}
-    
 }
 
 /* Portrait phones and down */
@@ -705,6 +654,5 @@ height: 300px;
         display: none;
     }
     .content-primary, .content-secondary {
-        top: 47px;
     }
 }

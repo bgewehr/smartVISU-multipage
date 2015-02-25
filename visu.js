@@ -45,7 +45,7 @@ var b = document.documentElement;
 // ----- b a s i c 2 ------------------------------------------------------------
 // ------Ergänzung von Bernd Gewehr--------------------------------------------
 
-$(document).ready(function(){
+ $(document).on("pagecreate", function() {
 
 	
 // ----- basic.pager ----------------------------------------------------------
