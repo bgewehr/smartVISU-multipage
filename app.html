@@ -1,33 +1,33 @@
 
-<div data-role="page" id="rooms" class="ui-page" data-theme="a">
+<div data-role="page" id="index" class="ui-page" data-theme="a">
 
-<div data-role="header" data-position="fixed" data-tap-toggle="false">
-	<div class="ui-left">
-		<div class="mini"  style="float:left">{{ lib.smartvisu() }}<br><span id="miniclock" class="miniclock" data-widget="clock.miniclock" data-repeat="1i">{{ now|date('H:i') }}</span>, {{ now|date('d.m,') }}</div>
-		<a id="menu-info" class="icon1" href="#info"><img class="icon" src="{{ icon0 }}message_info.svg" /></a>
-		<a id="menu-system" class="icon1" data-ajax="true" href="#config"><img class="icon" src="{{ icon0 }}edit_settings.svg" /></a>
-		<a id="Fritz" class="icon1" data-ajax="true" href="#fritzbox"><img class="icon" src="{{ icon0 }}it_router.svg" /></a>			
-	</div>
-	<div class="ui-right">
-		<span data-role="controlgroup" data-type="horizontal">
+<div data-role="header">
+    <div style="text-align:right;margin-top:17px;">
+    	<span data-role="controlgroup" data-type="horizontal">
+			<a href="#config" class="ui-btn-left" style="margin-top: 20px; text-decoration: none;color:white;">
+				<div class="mini" style="float:left;vertical-align:center;text-align:left;">{{ lib.smartvisu() }}<br><span id="miniclock" class="miniclock" data-widget="clock.miniclock" data-repeat="1i">{{ now|date('H:i') }}</span>, {{ now|date('d.m') }}</div>
+    		</a>
 			{{ basic.button('quick.alldonwn', 'quick.alldown', '', icon1~'control_arrow_down.png', 'on') }}
 			{{ basic.button('quick.allup', 'quick.allup', '', icon1~'control_arrow_up.png', 'off') }}
 			{{ basic.button('quick.alloff', 'quick.alloff', '', icon1~'light_light_dim_100.png', 'off') }}
 			{{ basic.button('quick.allon', 'quick.allon', '', icon1~'light_light_dim_00.png', 'on') }}
 			{{ basic.button('quick.garage', 'garage.sw', '', icon0~'Hoermann.png') }}
 		</span>
-	</div>
-	<div class="signal hide" onClick="$('.ui-page-active .alert').popup('open');"></div>
-	<div class="alert" data-role="popup" data-overlay-theme="a">
-		<div data-role="header" data-theme="c"><h1></h1></div>
-		<p></p>
-		<div class="control">
-			<span class="stamp"></span>
-			<a onClick="notify.remove();" class="ui-mini" data-icon="check" data-iconpos="top" data-role="button" data-inline="true">OK</a>
-			<a onClick="$('.alert').popup('close');" class="ui-mini" class="ui-mini" data-icon="delete" data-iconpos="top" data-role="button" data-inline="true">Cancel</a>
-		</div>
+		<div class="signal hide" onClick="$('.ui-page-active .alert').popup('open');"></div>
+			<div class="alert" data-role="popup" data-overlay-theme="a">
+				<div data-role="header" data-theme="c"><h1></h1></div>
+				<p></p>
 
-	</div>
+				<div class="control">
+					<span class="stamp"></span>
+					<a onClick="notify.remove();" class="ui-mini" data-icon="check" data-iconpos="top" data-role="button" data-inline="true">OK</a>
+					<a onClick="$('.alert').popup('close');" class="ui-mini" class="ui-mini" data-icon="delete" data-iconpos="top" data-role="button" data-inline="true">Cancel</a>
+				</div>
+
+			</div>	
+    </div>
+    /**<a href="#config" data-icon="gear" class="ui-btn-left" style="margin-top: 20px;"></a>*/
+    /**<a href="#info" data-icon="bars" class="ui-btn-left" style="margin-top: 20px;">Menue</a>*/
 </div>
 
 <div data-role="main" class="ui-content">
@@ -223,6 +223,9 @@
 	</li>
 </ul>
 </div>
+
 </div>
+
+
 
 

@@ -1,4 +1,5 @@
-<div data-role="page" id="info"  class="ui-page" data-theme="a">
+<div data-role="page" id="info" class="ui-page" data-theme="a">
+ 	<div data-role="main" class="ui-content">		
 		{% import "clock.html" as clock %}
 		{{ clock.digiclock('clock') }}
 		<div class="center">
@@ -15,4 +16,5 @@
 		<hr>
 		{% import "calendar.html" as calendar %}
 	    {{ calendar.list('calendarlist', 'Kalender', 7) }}
+    </div>
 </div>

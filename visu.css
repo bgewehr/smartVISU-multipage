@@ -19,9 +19,53 @@ margin: 0;
 padding: 0;
 }
 
+/** Hamburger Menu */
+
+.mobile-nav {
+	width: 25px;
+	height: 25px;
+	padding: 8px;
+	background: #C0C0C0;	
+	float:left;	
+}
+
+.menu-btn div {
+	position: absolute;
+	/*left: 15;
+	top: 0;
+	padding-left: 8px;
+	margin-top: -0.50em;*/
+	line-height: 1.2;
+	font-size: 18px;
+	font-weight: 200;
+	vertical-align: middle;
+	z-index: 99;
+}
+ 
+.menu-btn span {
+	display: block;
+	width: 19px;
+	height: 3px;
+	margin: 4px 0;
+	background: #181818;
+	z-index: 99;
+}
+ 
+.responsive-menu{
+	display: none;
+}
+ 
+.expand {
+	display: block !important; 
+}
+
+/** Collapsibles */
+
 .ui-collapsible-content>.ui-listview {
 margin: initial;
 }
+
+/** header icons and scenes buttons */
 
 .quickbuttons {
 	padding-top: 5px;
@@ -60,11 +104,14 @@ float: right;
 margin: 20px 2px 0 0;
 text-align: right;
 }
+
 .ui-page > .ui-header .ui-left {
 width: 100%;
 float: left;
 margin: 20px 2px 0 0;
 }
+
+/** LED widget */
 
 .LED {
   width: 10px;
@@ -87,9 +134,13 @@ margin: 20px 2px 0 0;
   background: #EAFF00;    
 }
 
+ /** rtr widget */
+
 .rtr {
 	text-align: center;
 }
+
+/** base formatting */
 
 .body {
     background-color: black;
@@ -99,12 +150,6 @@ margin: 20px 2px 0 0;
     width: 35px;
     height: 35px;
 }
-
-div.scenes {
-	padding-bottom: 5px;
-	text-align: right;
-	float: right;
-	}	
 
 
 div .preblock {
@@ -613,7 +658,7 @@ height: 300px;
     .content-primary, .content-secondary {
     }
     .nw_tiles li {
-        width: 50%;
+        width: 33.33%;
     }
     .ui-header img.icon {
         width: 32px;

@@ -1,6 +1,6 @@
 $(document).on('swipeleft swiperight', function (event) {
  if(event.type == 'swiperight') {
-  var prevpage = '#rooms'; 
+  var prevpage = '#index'; 
 	  //+ $.mobile.activePage.prev('div[data-role="page"]')[0].id;
   $.mobile.changePage(prevpage, {
    transition: 'slide',
@@ -105,7 +105,7 @@ $('input[data-widget="basic.textinput"]').delegate('', {
 $('select[data-widget="basic.selectmenu"]').delegate('', {
 	'update': function (event, response) {
 		var prog = response[0].match(/prog[123]/g);
-		$(this).val(prog).selectmenu('refresh');
+		$(this).val(prog).selectmenu().selectmenu('refresh');
 		// DEBUG: console.log("[basic.selectmenu] update '" + this.id + "': aktuell: " +  $(this).attr('selected'), response); 
 	},
 

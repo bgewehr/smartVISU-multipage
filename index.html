@@ -9,15 +9,22 @@
 
 
 {% extends "base.html"%}
-
 {% block body %}
+{% set page = 'rooms' %}
 {% include "app.html" %}
-{% include "room_wohnzimmer.html" %}
-{% include "room_buero.html" %}
-{% include "room_schlafzimmer.html" %}
-{% include "room_garage.html" %}
+{% set page = 'info' %}
 {% include "info.html" %}
+{% set page = 'room_wohnzimmer' %}
+{% include "room_wohnzimmer.html" %}
+{% set page = 'room_buero' %}
+{% include "room_buero.html" %}
+{% set page = 'room_schlafzimmer' %}
+{% include "room_schlafzimmer.html" %}
+{% set page = 'room_garage' %}
+{% include "room_garage.html" %}
+{% set page = 'room_Fritzbox' %}
 {% include "Fritzbox.html" %}
+{% set page = 'config' %}
 {% include "config.html" %}
 
 {% endblock %}
