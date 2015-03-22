@@ -15,48 +15,8 @@ html[data-useragent*='Chrome'] .uzsuTimeInput{
 }
 
 * {
-margin: 0;
+/**margin: 0;*/
 padding: 0;
-}
-
-/** Hamburger Menu */
-
-.mobile-nav {
-	width: 25px;
-	height: 25px;
-	padding: 8px;
-	background: #C0C0C0;	
-	float:left;	
-}
-
-.menu-btn div {
-	position: absolute;
-	/*left: 15;
-	top: 0;
-	padding-left: 8px;
-	margin-top: -0.50em;*/
-	line-height: 1.2;
-	font-size: 18px;
-	font-weight: 200;
-	vertical-align: middle;
-	z-index: 99;
-}
- 
-.menu-btn span {
-	display: block;
-	width: 19px;
-	height: 3px;
-	margin: 4px 0;
-	background: #181818;
-	z-index: 99;
-}
- 
-.responsive-menu{
-	display: none;
-}
- 
-.expand {
-	display: block !important; 
 }
 
 /** Collapsibles */
@@ -89,26 +49,26 @@ div.scenes {
 }	
 
 .ui-page > .ui-header {
-text-align: left;
-height: 62px;
-border-bottom: 1px solid #222;
-min-width: 320px;
+	text-align: left;
+	height: 62px;
+	border-bottom: 1px solid #222;
+	min-width: 320px;
 }
 
 .ui-page > .ui-header .ui-right {
-width: auto;
-position:absolute;
-top:0;
-right:0;
-float: right;
-margin: 20px 2px 0 0;
-text-align: right;
+	width: auto;
+	position:absolute;
+	top:0;
+	right:0;
+	float: right;
+	margin: 20px 2px 0 0;
+	text-align: right;
 }
 
 .ui-page > .ui-header .ui-left {
-width: 100%;
-float: left;
-margin: 20px 2px 0 0;
+	width: 100%;
+	float: left;
+	margin: 20px 2px 0 0;
 }
 
 /** LED widget */
@@ -138,6 +98,10 @@ margin: 20px 2px 0 0;
 
 .rtr {
 	text-align: center;
+}
+
+.control{
+	text-align=center;
 }
 
 /** base formatting */

@@ -7,11 +7,9 @@
 * -----------------------------------------------------------------------------
 */
 <div data-role="page" id="fritzbox"  class="base" data-theme="a">
-{% import "widget_fritzbox_list.html" as fritzbox %}
 <h1><img class="icon" src='{{ icon0 }}it_router.png'/>Fritzbox</h1>
 
     <div class="preblock">
-    {% import "widget_auth_switch.html" as key %}
 	{{ key.auth_switch('Switchfire', 'test.io', icon1~'secur_smoke_detector.png', icon0~'secur_smoke_detector.png',1,0,1234,'Code eingeben:','Falscher Code') }}
 	disable Timer für callmonitor: {{ basic.switch('testattr','testattr') }}
 	</div>

@@ -36,7 +36,6 @@
 	<li data-icon="false" class="ui-btn ui-btn-up-a ui-btn-icon-right ui-li ui-li-has-thumb">
 		<a href="#room_garage">
 	      	<div class="icon ui-li-thumb">
-				{% import "icon.html" as icon %}
 				{{ icon.shutter('garagentor1', '', 'garage.state', 0, 100) }}
 			</div>
 			<h3>Garage</h3>
@@ -47,7 +46,7 @@
 	</li>
 	
 	<li data-icon="false" class="ui-btn ui-btn-up-a ui-btn-icon-right ui-li ui-li-has-thumb">
-		<a class="ui-link-inherit">
+		<a href="#">
 		/**	<img class="icon" src='{{ icon0 }}message_presence_active.png'/>*/
 		<div class="icon ui-li-thumb">
 			{{ basic.symbol('present', 'residents', '', icon1~'message_presence_active.png', 'present') }}
@@ -74,10 +73,9 @@
 		</a>
 	</li>	
 	<li data-icon="false" class="ui-btn ui-btn-up-a ui-btn-icon-right ui-li ui-li-has-thumb">
-		<a href=#room_energie">
+		<a href="#room_energie">
 			/**<img class="icon" src='{{ icon0 }}measure_power_meter.png'/>*/
 			<div class="icon ui-li-thumb">
-				{% import "icon.html" as icon %}
 				{{ icon.graph('Stromverbrauch', '', 'VZ.strom.aktuell', 0, 5000) }}
 			</div>
 			<h3>Energie</h3>
@@ -95,7 +93,7 @@
 		</a>
 	</li>
 	<li data-icon="false" class="ui-btn ui-btn-up-a ui-btn-icon-right ui-li ui-li-has-thumb">
-		<a href="#room_Heizung">
+		<a href="#room_heizung">
 			<div class="icon ui-li-thumb">
 				{{ basic.symbol('brennt', 'Heizung.aktiv', '', icon1~'sani_boiler_temp.png', 'on') }}
 				{{ basic.symbol('brennt_nicht', 'Heizung.aktiv', '', icon0~'sani_boiler_temp.png', 'off') }}
@@ -133,7 +131,7 @@
 		</a>
 	</li>
 	<li data-icon="false">
-		<a href="#room_Kueche">
+		<a href="#room_kueche">
 			<img class="icon" src='{{ icon0 }}scene_cooking_hob.png'/><h3>Küche</h3>
 			<div class="ui-li-aside"></div>
 		</a>
@@ -145,7 +143,7 @@
 		</a>
 	</li>
 	<li data-icon="false">
-		<a href="#room_Flur">
+		<a href="#room_flur">
 			<img class="icon" src='{{ icon0 }}scene_corridor.png'/><h3>Flur</h3>
 			<div class="ui-li-aside"></div>
 		</a>

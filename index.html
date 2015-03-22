@@ -10,21 +10,27 @@
 
 {% extends "base.html"%}
 {% block body %}
-{% set page = 'rooms' %}
+
+/** load all necessaary widgets */
+{% import "basic.html" as basic %}
+{% import "icon.html" as icon %}
+{% import "widget_fritzbox_list.html" as fritzbox %}
+{% import "widget_auth_switch.html" as key %}
+{% import "phone.html" as phone %}
+{% import "calendar.html" as calendar %}
+{% import "clock.html" as clock %}
+{% import "widget_list.html" as list %}
+{% import "basic2.html" as basic2 %}
+{% import "multimedia.html" as multimedia %}		
+
+/** include all pages */		
 {% include "app.html" %}
 {% set page = 'info' %}
 {% include "info.html" %}
-{% set page = 'room_wohnzimmer' %}
-{% include "room_wohnzimmer.html" %}
-{% set page = 'room_buero' %}
-{% include "room_buero.html" %}
-{% set page = 'room_schlafzimmer' %}
-{% include "room_schlafzimmer.html" %}
-{% set page = 'room_garage' %}
-{% include "room_garage.html" %}
-{% set page = 'room_Fritzbox' %}
+{% for file in dir('pages/'~config_pages, '^(room_.*)') %}
+		{% include file.name %}
+{% endfor %}
 {% include "Fritzbox.html" %}
-{% set page = 'config' %}
 {% include "config.html" %}
 
 {% endblock %}
