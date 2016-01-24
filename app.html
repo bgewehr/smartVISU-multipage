@@ -83,8 +83,12 @@
 				<table  border="0" cellpadding="0" cellspacing="0" border-spacing="0" width="100%" style="font-size:0.85em; float:right">
 					<tr><td width="20%"></td><td width="40%">akt&nbsp;</td>
 					<td width="40%">24h</td></tr>
-					<tr><td>G:&nbsp;</td>
-					<td>{{ basic.float('VZ.gas.aktuell', 'VZ.gas.aktuell', 'm3') }} &nbsp;</td>
+<tr><td>W:&nbsp;</td>
+					<td>{{ basic.float('VZ.Wasser.aktuell', 'VZ.Wasser.aktuell', 'l/h') }} &nbsp;</td>
+					<td>{{ basic.float('VZ.Wasser.24h', 'VZ.Wasser.24h', 'l') }}</td></tr>
+					
+<tr><td>G:&nbsp;</td>
+					<td>{{ basic.float('VZ.gas.aktuell', 'VZ.gas.aktuell', 'm3/h') }} &nbsp;</td>
 					<td>{{ basic.float('VZ.gas.24h', 'VZ.gas.24h', 'm3') }}</td></tr>
 					<tr><td>S:&nbsp;</td><td>{{ basic.value('VZ.strom.aktuell', 'VZ.strom.aktuell', 'W') }}&nbsp;</td>
 					<td>{{ basic.formula('VZ.strom.24h', 'VZ.strom.24h', 'kWh', 'VAR / 1000') }}</td></tr>
@@ -204,6 +208,19 @@
 				<div class="ui-ri-aside">
 					{{ basic.float('Terrasse.temperatur', 'Terrasse.temperatur.luft', ' °C') }} &nbsp;
 					{{ basic.float('Terrasse.humidity', 'Terrasse.humidity', ' %') }}<br />
+					<table border="0" cellpadding="0" cellspacing="0" border-spacing="0" width="100%" style="text-align:center; font-size:0.85em; float:right">
+					<tr><td>V1</td><td>V2</td><td>V3</td><td>V4</td></tr>
+					<tr>
+					<td>{{ basic.symbol('Ventil1_on', 'Gartenwasser_V1', '',  icon1~'sani_water_tap.png', '1') }}
+						{{ basic.symbol('Ventil1_off', 'Gartenwasser_V1', '',  icon0~'sani_water_tap.png', '0') }}</td>				
+					<td>{{ basic.symbol('Ventil2_on', 'Gartenwasser_V2', '', icon1~'sani_water_tap.png', '1') }}
+						{{ basic.symbol('Ventil2_off', 'Gartenwasser_V2', '', icon0~'sani_water_tap.png', '0') }}</td>
+					<td>{{ basic.symbol('Ventil3_on', 'Gartenwasser_V3', '', icon1~'sani_water_tap.png', '1') }}
+						{{ basic.symbol('Ventil3_off', 'Gartenwasser_V3', '',  icon0~'sani_water_tap.png', '0') }}</td>
+					<td>{{ basic.symbol('Ventil4_on', 'Gartenwasser_V4', '',  icon1~'sani_water_tap.png', '1') }}
+						{{ basic.symbol('Ventil4_off', 'Gartenwasser_V4', '',  icon0~'sani_water_tap.png', '0') }}</td>
+					</tr>
+					</table>
 				</div>
 			</a>
 	</li>

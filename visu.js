@@ -46,21 +46,3 @@ var b = document.documentElement;
     b.setAttribute('data-useragent',  navigator.userAgent);
     b.setAttribute('data-platform', navigator.platform );
     b.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':'');
-
-    
- // QLOCK screensaver
- // idleTimer() takes an optional argument that defines the idle timeout
- // timeout is in milliseconds; defaults to 30000
- $(document).on('pageinit', function() {
-     if (jQuery().idleTimer && navigator.userAgent.match(/iPad/i) != null) {
-         $.idleTimer(300 * 1000);
-     }
- });
-
- $(document).bind('idle.idleTimer', function() {
-     $.mobile.changePage("index.php?page=qlock");
- });
-
- $(document).bind('active.idleTimer', function() {
-     parent.history.back();
- });
